@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 
-VERSION = 'Saturn v0.2.0a'           # replace part inside quotes with desired output
+VERSION = 'Saturn v0.2.0b'           # replace part inside quotes with desired output
 FEATURES = 'a bot.'    # replace part inside quotes with desired output
 PREFIX = 's!'                        # change to desired prefix
 
