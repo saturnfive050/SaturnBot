@@ -12,6 +12,7 @@ class Voice(commands.Cog):
 
     @commands.command()
     async def join(self, ctx):
+        '''Joins a voice channel'''
         channel = ctx.message.author.voice.channel
         voice = get(self.bot.voice_clients, guild=ctx.guild)
 
@@ -32,6 +33,7 @@ class Voice(commands.Cog):
 
     @commands.command()
     async def leave(self, ctx):
+        '''Leaves a voice channel'''
         channel = ctx.message.author.voice.channel
         voice = get(self.bot.voice_clients, guild=ctx.guild)
 
@@ -45,7 +47,7 @@ class Voice(commands.Cog):
 
     @commands.command()
     async def play(self, ctx, url: str):
-
+        '''Put youtube URL after command to play'''
         song_there = os.path.isfile("song.mp3")
         try:
             if song_there:
