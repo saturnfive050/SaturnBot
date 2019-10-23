@@ -55,7 +55,7 @@ class User(commands.Cog):
     @commands.command()
     async def doot(self, ctx):
         '''Skeledoot'''
-        await ctx.send('https://discordapp.com/channels/576168356823040010/600668021077573665/636527286505570304')
+        await ctx.send('<https://discordapp.com/channels/576168356823040010/600668021077573665/636527286505570304>')
 
     @commands.command()
     async def spook(self, ctx):
