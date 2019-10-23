@@ -1,7 +1,5 @@
 import discord
 from discord.ext import commands
-import asyncio
-
 
 async def is_owner(ctx):
     return ctx.author.id == 375375057138089986
@@ -18,8 +16,6 @@ class Owner(commands.Cog):
     @commands.check(is_owner)
     async def say(self, ctx, channel: discord.TextChannel, *, things: commands.clean_content):
         '''OWNER ONLY: Messages a channel'''
-        await channel.trigger_typing()
-        await asyncio.sleep(4)
         await channel.send(things)
         await ctx.send("sent to channel")
 

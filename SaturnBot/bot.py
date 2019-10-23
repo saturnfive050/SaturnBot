@@ -10,18 +10,12 @@ from discord.ext import commands
 
 # =======================================================================================
 
-owner_id = 375375057138089986       # put user id here
 STATUS = 'with Saturnfive\'s emotions'       # put desired "playing" status between quotes
 PREFIX = 's!'
 
 # =======================================================================================
 
 bot = commands.Bot(command_prefix=PREFIX)
-
-
-async def is_owner(ctx):
-    return ctx.author.id == owner_id
-
 
 # --------------------------------------------------------------------
 # EVENTS

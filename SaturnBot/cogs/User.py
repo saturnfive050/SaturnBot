@@ -1,8 +1,7 @@
 import discord
 from discord.ext import commands
-import asyncio
 
-VERSION = 'Saturn v0.1.0b'           # replace part inside quotes with desired output
+VERSION = 'Saturn v0.1.1a'           # replace part inside quotes with desired output
 FEATURES = 'a bot.'    # replace part inside quotes with desired output
 PREFIX = 's!'                        # change to desired prefix
 
@@ -18,7 +17,7 @@ class User(commands.Cog):
 
     @commands.command()
     async def botinfo(self, ctx):
-        """IDK, info I guess"""
+        """Basic Info about the bot"""
         embed = discord.Embed(title=VERSION, description=FEATURES, color=discord.Color.dark_green())
         embed.add_field(name="Prefix", value=PREFIX)
         await ctx.send(embed=embed)
