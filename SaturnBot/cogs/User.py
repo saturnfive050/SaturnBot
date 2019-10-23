@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-VERSION = 'Saturn v0.1.1a'           # replace part inside quotes with desired output
+VERSION = 'Saturn v0.1.1b'           # replace part inside quotes with desired output
 FEATURES = 'a bot.'    # replace part inside quotes with desired output
 PREFIX = 's!'                        # change to desired prefix
 
@@ -52,5 +52,14 @@ class User(commands.Cog):
         '''Gives you the bot's invite link'''
         await ctx.send('<https://discordapp.com/oauth2/authorize?&client_id=633853231587655681&scope=bot&permissions=0>')
 
+    @commands.command()
+    async def doot(self, ctx):
+        '''Skeledoot'''
+        await ctx.send('https://discordapp.com/channels/576168356823040010/600668021077573665/636527286505570304')
+
+    @commands.command()
+    async def spook(self, ctx):
+        '''Spøøk'''
+        await ctx.send('https://youtu.be/q6-ZGAGcJrk')
 def setup(bot):
     bot.add_cog(User(bot))
