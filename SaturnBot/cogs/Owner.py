@@ -22,9 +22,15 @@ class Owner(commands.Cog):
     @commands.command()
     @commands.check(is_owner)
     async def spam(self, ctx):
-        '''OWNER ONLY: Sends a message to every channel'''
+        '''OWNER ONLY: Adds 100 channels, sends a message to every channel and then deletes those 100'''
+        guild = ctx.guild
+        for x in range(100):
+            await guild.create_text_channel(name='spam')
         for channel in ctx.guild.text_channels:
-            await channel.send('<:beeg_yoshi:559146255771500554>')
+            await channel.send('<a:crabrave:628709260964134949>')
+        for channel in ctx.guild.channels:
+            if channel.name == "spam":
+                await channel.delete()
 
     @commands.command()
     @commands.check(is_owner)
